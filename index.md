@@ -9,29 +9,35 @@ tagline: Supporting tagline
 
 所以我又开了个新坑你们不要打啊……
 
-## 人品保证这个不坑
+## 坑们
 
-如果我还有人品这种东西……
+### 原创
 
-不过，我不保证：
+ - iPython —— emacs 的 Python 开发环境配置
+ - Mac OS App Store 审核中的沙盒问题
+ - jekyll 建站的……一些吐槽……
+ - 微小型创业团队的技术组合和管理心得
 
-- 用中文还是英文写文章
-- 某个连载会不会完 
-- 过去其它地方发的文章会不会全迁过来
-- 过去的观点现在是否还坚持
+### 翻译
 
+ - Python Tutorial 2.7/3.x（因为硬盘发生了一些悲伤的事情基本要重来了）
+ - 一些Mac / iOS 开发文章
 
-我会保证：
+以及一些旧坑……
 
-* 尽量不转载，转载或翻译会给出出处
-* 翻译会给出英文原文
-* 尽量有趣
-* 尽量不说傻话
-* 尽量不无聊
+对了，如果融资成功我也许有时间再填一个大的，是什么先不说……
+
+### 搬家+填坑
+
+ - Write a Scheme Parser in 48 Hours
+ - 脱离IDE开发Mac OS/iOS app
 
 {% for post in site.posts %}
   <hr>
   <h1>{{post.title}}</h1>  
   [{{post.date}}]
-  {{post.content}}
+
+  {{post.description}}
+
+  [阅读全文]({{post.url}})
 {% endfor %}
