@@ -3,7 +3,7 @@ layout: post
 title: "How To Read Mathematics 如何阅读数学"
 description: "未经启蒙的话，数学是门无法阅读又无法理解的语言"
 category: translation
-tags: [翻译, 旧文收藏]
+tags: [翻译, 旧文收藏, 数学]
 ---
 {% include JB/setup %}
 
