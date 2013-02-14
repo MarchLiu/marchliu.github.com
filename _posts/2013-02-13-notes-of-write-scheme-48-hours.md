@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Notes of Write Scheme 48 Hours"
-description: "这是一份学习笔记，《48 Hours》通过开发一个Haskell 解释器介绍了 Haskell 语言"
+description: "这是一份学习笔记，《48 Hours》通过开发一个 Scheme 解释器介绍了 Haskell 语言"
 category: notes
 tags: [learn, notes, haskell]
 ---
