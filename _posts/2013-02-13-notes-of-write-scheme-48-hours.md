@@ -990,9 +990,9 @@ main = do args <- getArgs
 
 我的阅读过程还是比较粗糙的，建议在遇到不能完全理解的地方，用 ghci 调试 一下。
 
-作为第一本书，Yet Another Haskell Tutorial 更系统，内容循序渐进。
+作为第一本书，[Yet Another Haskell Tutorial](http://www.cs.utah.edu/~hal/docs/daume02yaht.pdf) 更系统，内容循序渐进。
 
-作为第二本书，Real World Haskell 更有实践性，曲线比较平滑。
+作为第二本书，[Real World Haskell](http://www.realworldhaskell.org/) 更有实践性，曲线比较平滑。
 
-本书应该作为从初阶到中阶的一本阶段总结辅导。或者，除非你 scheme/lisp 基础，对第一本书也学的比较顺利……
+本书应该作为从初阶到中阶的一本阶段总结辅导。或者，除非你有 scheme/lisp 基础，对第一本书也学的比较顺利……
 
