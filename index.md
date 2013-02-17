@@ -15,7 +15,6 @@ tagline: Supporting tagline
 
 ### 原创
 
- - iPython —— emacs 的 Python 开发环境配置
  - Mac OS App Store 审核中的沙盒问题
  - jekyll 建站的……一些吐槽……
  - 微小型创业团队的技术组合和管理心得
