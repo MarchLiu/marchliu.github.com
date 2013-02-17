@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Wife and Me Everyday"
+title: "每天都被老婆打"
 description: "每天都被老婆打什么的…才没有呢！只是单纯的修恩爱，哼！"
 category: live
 tags: [live, family, joke]
