@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 人生啊…
+title: 挖坑不填兽
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
