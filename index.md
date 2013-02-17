@@ -29,7 +29,6 @@ tagline: Supporting tagline
 
 ### 搬家+填坑
 
- - Write a Scheme Parser in 48 Hours
  - 脱离IDE开发Mac OS/iOS app
 
 {% for post in site.posts %}
