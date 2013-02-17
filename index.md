@@ -9,6 +9,8 @@ tagline: Supporting tagline
 
 所以我又开了个新坑你们不要打啊……
 
+还有就是RSS地址在[这里](http://marchliu.github.com/atom.xml)。
+
 ## 坑们
 
 ### 原创
