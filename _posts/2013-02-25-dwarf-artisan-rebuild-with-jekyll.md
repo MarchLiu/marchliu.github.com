@@ -33,7 +33,7 @@ tags: [tech, web, jekyll]
 
 这件事比预想的麻烦一些，我找了一些纯静态的Javascript相册代码，最后决定用了[这个](http://www.twospy.com/galleriffic/index.html)。不过sample的代码不能直接拿来用。有几个问题，首先js里有一些硬编码，依赖（很少）几个id，还有那么几个id跟我用的 jeykll 主题 Mark Reid 重名（所以它们的css混到了一起）。再就是 Mark Reid 主题的content区只有七百多像素宽，而这个相册的sample用掉了九百多个像素的宽度，直接嵌进去布局会混乱。经过一些细节调整，我做了一些妥协，初步达到了目的。
 
-目前我的做法是，如果我需要在我的某个 jekyll 网站上添加一个相册，就在那个网站的jekyll 根目录建立一个 images 目录，在里面建对应的相册路径，然后在这个根路径下执行脚本，传入相册子目录的名字作为相册名。脚本[1]会把图片剪裁成小尺寸以后放到对应的路径下，再生成一个模板片段，放到 _include/DA/ 目录下，然后就可以在需要它出现的地方include它了。
+目前我的做法是，如果我需要在我的某个 jekyll 网站上添加一个相册，就在那个网站的jekyll 根目录建立一个 images 目录，在里面建对应的相册路径，然后在这个根路径下执行脚本，传入相册子目录的名字作为相册名。脚本[^1]会把图片剪裁成小尺寸以后放到对应的路径下，再生成一个模板片段，放到 _include/DA/ 目录下，然后就可以在需要它出现的地方include它了。
 
 当然，这不是正确的做法，这只是我赶工的结果，正确的做法应该是把它变成一个通用的模板，传入一个数组，然后include模板，就像 JB/setup 和 JB/post_collate 这种。我只是不太喜欢像[这位老兄一样](https://groups.google.com/forum/?fromgroups=#!topic/liquid-templates/qwE5hWk-Kik) 用split创建数组——不过，这是个好办法。
 
