@@ -16,7 +16,6 @@ tagline: Supporting tagline
 ### 原创
 
  - Mac OS App Store 审核中的沙盒问题
- - jekyll 建站的……一些吐槽……
  - 微小型创业团队的技术组合和管理心得
 
 ### 翻译
@@ -35,7 +34,7 @@ tagline: Supporting tagline
 {% for post in site.posts %}
   <hr>
   <h1>{{post.title}}</h1>  
-  [{{post.date}}]
+  {{post.date|date: "%Y-%m-%d"}}
 
   {{post.description}}
 

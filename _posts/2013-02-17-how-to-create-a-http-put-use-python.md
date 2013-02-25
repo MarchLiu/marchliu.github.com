@@ -3,7 +3,7 @@ layout: post
 title: "How To Create a HTTP PUT use Python"
 description: "旧文搬家，用Python构造HTTP PUT请求的代码"
 category: tech
-tags: [Python, WEB]
+tags: [python, web]
 ---
 {% include JB/setup %}
 
