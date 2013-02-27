@@ -38,5 +38,9 @@ tagline: Supporting tagline
 
   {{post.description}}
 
+  {% if post.figure %}
+<a href="{{post.url}}"><img src="{{post.figure}}"/></a>
+  {% endif %}
+
   [阅读全文]({{post.url}})
 {% endfor %}
