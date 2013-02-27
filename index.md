@@ -1,11 +1,11 @@
 ---
 layout: page
 title: 挖坑不填兽
-tagline: Supporting tagline
+tagline: 萝莉控什么的人家才不是哼！
 ---
 {% include JB/setup %}
 
-## 就是一个坑又一个坑……
+## 一个坑又一个坑……
 
 所以我又开了个新坑你们不要打啊……
 
