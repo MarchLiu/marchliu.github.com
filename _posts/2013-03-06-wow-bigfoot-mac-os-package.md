@@ -8,7 +8,7 @@ figure: /images/bigfoot_small.png
 ---
 {% include JB/setup %}
 
-中国的WOW玩家大多对大脚工具包不陌生。不过大脚只有windows版，MAC上装不了。其实 WOW 的插件都是LUA脚本，这个跟操作系统无关。我把最近版本的大脚脚本打了个包。可以点击这里[下载](/static/BigFoot.app)。
+中国的WOW玩家大多对大脚工具包不陌生。不过大脚只有windows版，MAC上装不了。其实 WOW 的插件都是LUA脚本，这个跟操作系统无关。我把最近版本的大脚脚本打了个包。可以点击这里<a href="/static/BigFoot.zip">下载</a>
 
 ![BigFoot](/images/bigfoot.png)
 
