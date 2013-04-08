@@ -2,8 +2,8 @@
 layout: post
 title: "诚聘全职漫画助理【珠海】"
 description: ""
-category: 
-tags: []
+category: jobs
+tags: [招聘]
 ---
 {% include JB/setup %}
 
