@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>如何给 Jekyll 的 Post 设定附图</title>
+    <meta name="description" content="Jeklly 站点的页面可以附加元信息，用这种方法可以很方便的给Post设定附图。">
+    <meta name="author" content="刘鑫">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">挖坑不填兽</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>如何给 Jekyll 的 Post 设定附图 <small>Supporting tagline</small></h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    
+<p>我的公司 <a href="http://dwarf-artisan.com">Dwarf Artisan</a> 的网站也是用Jekyll搭建的，但是它不是典型的博客网站，例如，首页需要展示一些固定的内容。我对 Jekyll 的深入也基本上都围绕内容展示进行。</p>
+
+<p>今天，我给文章加上了附图。这样，我可以在首页展示的时候，指定一张图片，而这个图片不一定也出现在正文。</p>
+
+<p>首页上的文章聚合基本上都是类似这样的逻辑：</p>
+
+<pre><code>
+{% for post in site.posts %}
+  {% if post.categories contains 'production' %}
+  &lt;hr&gt;
+  &lt;h2&gt;&lt;a href="{{post.url}}"&gt;{{post.title}}&lt;/a&gt;&lt;/h2&gt;  
+  {{post.description}}
+  &lt;br&gt;
+  {% endif %}
+{% endfor %}
+
+</code></pre>
+
+<p>现在我们扩展一下它：</p>
+
+<pre><code>
+{% for post in site.posts %}
+  {% if post.categories contains 'production' %}
+  &lt;hr&gt;
+  &lt;h2&gt;&lt;a href="{{post.url}}"&gt;{{post.title}}&lt;/a&gt;&lt;/h2&gt;  
+  {{post.description}}
+  {% if post.figure %}
+&lt;a href="{{post.url}}"&gt;&lt;img src="{{post.figure}}"/&gt;&lt;/a&gt;
+  {% endif %}
+  &lt;br&gt;
+  {% endif %}
+{% endfor %}
+
+</code></pre>
+
+<p>代码中的 post.figure 是图片的url，那么这个url从何而来呢？</p>
+
+<p>我们建立一个 jekyll Page 或 Post 的时候，会看到文件最前面的声明头</p>
+
+<pre><code>
+---
+layout: post
+title: "如何给 Jekyll 的 Post 设定附图"
+description: "Jeklly 站点的页面可以附加元信息，用这种方法可以很方便的给Post设定附图。"
+category: tech
+tags: [tech, web, jekyll]
+---
+
+</code></pre>
+
+<p>上面就是本文的头，其实它是一段 YAML，我们只要给它加一个 figure 字段，指向一张图片，例如，我在本页添加了figure，读者可以看到效果</p>
+
+<pre><code>---
+layout: post
+title: "Dwarf Desktop Runner"
+description: "Turn your desktop into a lively jokes runner!"
+categories: [productions, production]
+tags: [Screen Dwarves, Desktop Runner]
+figure: /images/new_da_home_page.png
+---
+</code></pre>
+
+<p>当 jekyll 解释 index.md 时，就会把figure字段的内容取出，显示出来。下图是Dwarf Artisan 的新首页的一部分，我们可以看到，在本站首页上显示的 figure 其实是它的缩略图。</p>
+
+<p><img src="/images/new_da_home_page.png" alt="New Dwarf Artisan Home Page" /></p>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/tech/2013/02/25/dwarf-artisan-rebuild-with-jekyll" title="我用 Jekyll 重构了 Dwarf Artisan">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/2013/03/06/wow-bigfoot-mac-os-package" title="WOW 大脚的 Mac 版打包">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>27 February 2013</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#tech-ref">tech <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#web-ref">web <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#jekyll-ref">jekyll <span>2</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 刘鑫 2013
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

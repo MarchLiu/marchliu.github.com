@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>我用 Jekyll 重构了 Dwarf Artisan</title>
+    <meta name="description" content="最初紧急搭建的公司网站已经越来越难以满足要求，我重构了 Dwarf Artisan 的网站。">
+    <meta name="author" content="刘鑫">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">挖坑不填兽</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>我用 Jekyll 重构了 Dwarf Artisan <small>Supporting tagline</small></h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    
+<h2 id="section">意外的开始</h2>
+
+<p>好吧……我要承认，其实我是在 Dwarf Clipboard 提交审核（呃，这个产品因为技术问题被拒了，我还没决定它的去处，总不能一直在我们的代码仓库里睡觉）的时候才想起来其实 Mac OS App Store 需要一个 App 维护网站。于是，原本因为人力问题搁置的 <a href="http://dwarf-artisan.com">Dwarf Artisan</a> 网站，就迫在眉睫了。我临时拿起 iweb，用差不多20分钟，拿内置模板架了一个网站。</p>
+
+<p>这个网站很好，iweb是个很赞的个人建站工具，它内置了很多漂亮的模板和组件，甚至允许我直接把iphoto的相册拖到页面上变成一个相册，而且这一切还都是纯静态的。这很省心。</p>
+
+<p>不过接下来就越来越麻烦，首先我不能让同事帮我编辑页面，因为 iweb 根本不能导出自己的文档，而且它只能把生成的网站同步出去，不能拉回来。</p>
+
+<p>第二件麻烦是是它不能直接编辑页面源码，至少我没找到。这个时候才让人明白fontpage有多良心。没有这个功能，不仅仅是不能写一些特效的问题，我不能在页面上放mailto、paypal、google analytics 之类的功能，想都别想，除非它们就出现在 iweb 的组件板上。</p>
+
+<h2 id="jekyll--jekyll-bootstrap">Jekyll 和 Jekyll bootstrap</h2>
+
+<p>首先是我们发现了 <a href="http://pages.github.com">github pages</a> 服务，这很抢眼，每天我们用github服务工作的时候，很难忽略这东西的存在。接下来，从 pages，我们就知道了 <a href="https://github.com/mojombo/jekyll">jekyll</a> ，简单玩了一下，这是个非常适合我们的技术。</p>
+
+<p>它很简单，用markdown书写内容，content和layout分开，而且可以自动生成静态页面——这足够了，反正我们的公司网站上没有什么动态逻辑。</p>
+
+<p>接下来，我的同事江南发现了它的 <a href="http://jekyllbootstrap.com/">bootstrap 项目</a> 。这个项目可以大大的减轻工作量，我们直接用它的设置就可以插入 google analytics，选用若干主题。</p>
+
+<p>很快，我搭建了一个原型，接下来遇到了一些麻烦，主要是 markdown 解释器的问题，有的中文支持不好（问题不算太大，但是总要以防万一），有的代码块功能实现的不好（这对一个技术团队也太重要了）。最终我选择了 kramdown 。然后我在我的个人 github pages （就是各位看到的这个站点）上做了一些实验，在选定theme以后，只剩了一个问题：相册。</p>
+
+<h2 id="javascript-">纯 Javascript 相册</h2>
+
+<p>除了产品展示，Dwarf Artisan 的网站上还有一些宝贵的东西：我们的朋友阎女士的<a href="http://dwarf-artisan.com/columns/art/">画作</a>。无论如何，应该弄一个像样的相册工具放这些好东西吧。顺便说一下，Dwarf Artisan 只提供缩略图，对原作感兴趣可以直接联系作者，水印里有她的邮箱。</p>
+
+<p>这件事比预想的麻烦一些，我找了一些纯静态的Javascript相册代码，最后决定用了<a href="http://www.twospy.com/galleriffic/index.html">这个</a>。不过sample的代码不能直接拿来用。有几个问题，首先js里有一些硬编码，依赖（很少）几个id，还有那么几个id跟我用的 jeykll 主题 Mark Reid 重名（所以它们的css混到了一起）。再就是 Mark Reid 主题的content区只有七百多像素宽，而这个相册的sample用掉了九百多个像素的宽度，直接嵌进去布局会混乱。经过一些细节调整，我做了一些妥协，初步达到了目的。</p>
+
+<p>目前我的做法是，如果我需要在我的某个 jekyll 网站上添加一个相册，就在那个网站的jekyll 根目录建立一个 images 目录，在里面建对应的相册路径，然后在这个根路径下执行脚本，传入相册子目录的名字作为相册名。脚本<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>会把图片剪裁成小尺寸以后放到对应的路径下，再生成一个模板片段，放到 _include/DA/ 目录下，然后就可以在需要它出现的地方include它了。</p>
+
+<p>当然，这不是正确的做法，这只是我赶工的结果，正确的做法应该是把它变成一个通用的模板，传入一个数组，然后include模板，就像 JB/setup 和 JB/post_collate 这种。我只是不太喜欢像<a href="https://groups.google.com/forum/?fromgroups=#!topic/liquid-templates/qwE5hWk-Kik">这位老兄一样</a> 用split创建数组——不过，这是个好办法。</p>
+
+<p>我使用的代码放到了<a href="https://github.com/Dwarfartisan/BlackCookbook/">黑科技代码库</a>。<a href="https://github.com/Dwarfartisan/BlackCookbook/tree/master/ruby/jekyll-galleriffic">在这里</a>。欢迎随意取用，不过，这个代码没有经过任何改进，用之前最好自己处理一下，例如路径依赖什么的。</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>好吧，我去掉了“自动”两个字，作为十年的Python用户得瑟自己会这种脚本也太逊了，哪怕这是我写的第三个还是第四个ruby脚本（不算去年写过的两千行puppet）……<a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/other/2013/02/22/me-and-keyboard" title="我的键盘体验">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/tech/2013/02/27/how-to-add-figure-in-jekyll-post" title="如何给 Jekyll 的 Post 设定附图">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>25 February 2013</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#tech-ref">tech <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#web-ref">web <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#jekyll-ref">jekyll <span>2</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 刘鑫 2013
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+
