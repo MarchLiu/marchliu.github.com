@@ -39,11 +39,16 @@ SAE Python 版的本地开发环境，搭建已经相当简单。这里介绍一
 需要注意的是，有时候我们本地会遇到PIL库使用有问题，提示缺少 jpeg或zip等decoder。查了一下网络，应该是一些环境下（例如我使用的debian是在虚拟机里），debian没有正确的link对应的库到搜索路径。
 
 
-解决方法很简单，首先确认 libjpeg, libz, libpng 等我们需要用到的库（例如处理png和jpeg需要这三个库）已经通过apt安装，然后在类似  /usr/lib/x86_64-linux-gnu/ （或者你的系统版本对应的目录）这样的路径下找到这些so，link到/usr/lib 即可。
+解决方法很简单，首先确认 libjpeg, libz, libpng 等我们需要用到的库（例如处理 png 和 jpeg 需要这三个库）已经通过 apt 安装，然后在  /usr/lib/x86_64-linux-gnu/ （或者你的系统版本对应的目录）这样的路径下找到这些so，link 到/usr/lib 即可。
+
+   $ ~/: sudo ln -s /usr/lib/x86_64-linux-gnu/libjpeg.so /usr/lib
+   $ ~/: sudo ln -s /usr/lib/x86_64-linux-gnu/libfreetype. /usr/lib
+   $ ~/:  sudo ln -s /usr/lib/x86_64-linux-gnu/libfreetype.so /usr/lib
+   $ ~/:  sudo ln -s /usr/lib/x86_64-linux-gnu/libz.so /usr/lib 
 
 sae的启动脚本不复杂，一般来说配置和启动可以参照官方文档 http://sae.sina.com.cn/?m=devcenter&catId=304 。我使用的启动脚本可以做个参考：
 
-  dev_server.py --mysql=xxxx:xxxx@localhost:3306 --host=10.37.129.11 --storage-path=/tmp
+    dev_server.py --mysql=xxxx:xxxx@localhost:3306 --host=10.37.129.11 --storage-path=/tmp
 
 这里解释一下： 
 
