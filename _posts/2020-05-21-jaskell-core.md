@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jaskell Core 0.3"
-description: ""
+description: "我和代数组合子的十年"
 category: Tech
 tags: [Scala, Java, Parsec]
 ---
@@ -64,5 +64,10 @@ class TextSpec extends AnyFlatSpec with Matchers {
   }
 }
 ```
+
+十几年了，为之付出过那么多无眠之夜，终于我得到了一个能让自己满意的版本，它不仅仅是文本解析工具，还是
+真正的代数意义上的组合子。我终于把这个技术从文本解析领域推广到更广泛的抽象范畴，从Haskell移植到应用
+编程语言。这段旅途终于到达终点的时候，我却不知道该如何表达这种心情。我并没有很激动，但这也绝不是沮丧。
+那天晚上我对太太说"我收工了"的时候，她说，你看起来就像一下子被抽空了。
 
 后面我准备花一些时间，详细的说一下 Jaskell 各个版本的设计和使用。
