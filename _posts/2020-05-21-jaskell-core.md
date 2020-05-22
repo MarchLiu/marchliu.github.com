@@ -70,4 +70,7 @@ class TextSpec extends AnyFlatSpec with Matchers {
 编程语言。这段旅途终于到达终点的时候，我却不知道该如何表达这种心情。我并没有很激动，但这也绝不是沮丧。
 那天晚上我对太太说"我收工了"的时候，她说，你看起来就像一下子被抽空了。
 
+Jaskell Core: [https://github.com/MarchLiu/jaskell-core](https://github.com/MarchLiu/jaskell-core)
+Jaskell Java8: [https://github.com/MarchLiu/jaskell-java8](https://github.com/MarchLiu/jaskell-java8)
+
 后面我准备花一些时间，详细的说一下 Jaskell 各个版本的设计和使用。
