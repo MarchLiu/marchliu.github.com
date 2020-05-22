@@ -15,19 +15,18 @@ tagline: 萝莉控什么的人家才不是哼！
 
 ### 原创
 
- - Mac OS App Store 审核中的沙盒问题
  - 专业用户的 Mac OS 工作环境建立和管理
 
 ### 翻译
 
  - Python Tutorial 2.7/3.x（因为硬盘发生了一些悲伤的事情基本要重来了）
- - 一些Mac / iOS 开发文章
-
+ - Parsec 组合子，回头看来，我2010年开始创业的时候，"动手写一个组合子"还属于"有生之年"的事情
+ 
 以及一些旧坑……
 
 ### 搬家+填坑
 
- - 脱离IDE开发Mac OS/iOS app
+ - 现代化的 Java
 
 {% for post in site.posts %}
   <hr>
