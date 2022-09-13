@@ -10,6 +10,8 @@ highlighter: rouge
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
+remote_theme: daattali/beautiful-jekyll@5.0.0
+
 title : 挖坑不填兽
 tagline: Site Tagline
 author :
