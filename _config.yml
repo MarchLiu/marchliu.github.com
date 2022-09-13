@@ -6,10 +6,11 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 # pygments: true
 highlighter: rouge
-
+theme: minimal-mistakes-jekyll
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
+
 
 title : 挖坑不填兽
 tagline: Site Tagline
