@@ -3,3 +3,17 @@ layout: home
 title: 挖坑不填兽
 subtitle: 持续挖坑……
 ---
+{% for post in site.posts %}
+
+<hr>
+  <h1>{{post.title}}</h1>  
+  {{post.date|date: "%Y-%m-%d"}}
+
+  {{post.description}}
+
+  {% if post.figure %}
+`<a href="{{post.url}}"><img src="{{post.figure}}"/>``</a>`
+  {% endif %}
+
+  <a href="{{post.url}}">阅读全文</a>
+{% endfor %}
