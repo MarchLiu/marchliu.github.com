@@ -5,7 +5,7 @@ description: "这本书比我以前读过的 step by step 的读物更深入一�
 category: tech
 tags: [tech, read book, iOS]
 ---
-{% include JB/setup %}
+
 
 拿到这本书不久，我就投入了一个Mac项目的开发，然后直到最近，才重新开始iOS编程。
 所以迟迟没有对这本书做出评论。

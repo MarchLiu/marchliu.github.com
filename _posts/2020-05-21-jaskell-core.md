@@ -5,7 +5,7 @@ description: "我和代数组合子的十年"
 category: Tech
 tags: [Scala, Java, Parsec]
 ---
-{% include JB/setup %}
+
 
 # Jaskell 与 Scala
 

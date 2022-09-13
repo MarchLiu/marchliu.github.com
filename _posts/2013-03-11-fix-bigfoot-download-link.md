@@ -6,7 +6,7 @@ category:
 tags: [tech]
 figure: /images/bigfoot403.png
 ---
-{% include JB/setup %}
+
 
 前几天，我发了一篇Blog [WOW 大脚的 Mac 版打包](/2013/03/06/wow-bigfoot-mac-os-package)，
 放了一个WOW大脚的Mac包，因为原本就是给家人随便做的一个小东西，放上去以后也没注意看。偶然我发

@@ -6,7 +6,7 @@ category:
 tags: []
 figure: /images/wow_bf2.png
 ---
-{% include JB/setup %}
+
 
 没有任何技术含量，就是更新了5.2的支持…… [下载链接](/static/BigFoot.zip)。
 

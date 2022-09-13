@@ -5,7 +5,7 @@ description: "这是一份学习笔记，《48 Hours》通过开发一个 Scheme
 category: notes
 tags: [learn, notes, haskell]
 ---
-{% include JB/setup %}
+
 
 ## 原子词素解析器
 

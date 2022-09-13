@@ -5,7 +5,7 @@ description: "LVM 容量伸缩控制可以热调整，而这只依赖很简单�
 category: tech
 tags: [tech, sa, debian, xen-tools, xen]
 ---
-{% include JB/setup %}
+
 
 整理自我自己的两篇旧博客，分别介绍 LVM 伸缩控制。
 

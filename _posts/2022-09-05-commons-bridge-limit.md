@@ -6,7 +6,7 @@ description: ""
 category: 
 tags: []
 ---
-{% include JB/setup %}
+
 # Apache Commons Lang3 Bridge 未（完全）实现的内容
 ## 未实现的封装
 * 跳过所有的 deprecated

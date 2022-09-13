@@ -5,7 +5,7 @@ description: ""
 category: jobs
 tags: [招聘]
 ---
-{% include JB/setup %}
+
 
 矮人工匠工作室诚聘全职漫画助理（初级）⼀名， 协助工作室的漫画创作，参与电子书等
 软件制作。工作地点在珠海，公司提供宽敞的办公空间，Mac电脑及Wacom绘图板，内部

@@ -5,7 +5,7 @@ description: "未经启蒙的话，数学是门无法阅读又无法理解的语
 category: translation
 tags: [翻译, 旧文收藏, 数学]
 ---
-{% include JB/setup %}
+
 
 This article is part of the book Rediscovering Mathematics, which is due out in early 2011. - Rediscovering Mathematics: Patriot Ledger
 

@@ -3,8 +3,6 @@ layout: page
 title: 挖坑不填兽
 tagline: 都说了不填啦……
 ---
-{% include JB/setup %}
-
 ## 一个坑又一个坑……
 
 所以我又开了个新坑你们不要打啊……
@@ -15,7 +13,8 @@ tagline: 都说了不填啦……
 
 ### 原创
 
-- 专业用户的 Mac OS 工作环境建立和管理
+- Jaskell
+- Apache Commons Bridge for Scala
 
 ### 翻译
 
@@ -27,8 +26,6 @@ tagline: 都说了不填啦……
 ### 搬家+填坑
 
 - 现代化的 Java
-- Jaskell
-- Apache Commons Bridge for Scala
 
 {% for post in site.posts %}
 

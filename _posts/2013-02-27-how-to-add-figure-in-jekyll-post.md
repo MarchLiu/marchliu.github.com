@@ -6,7 +6,7 @@ category: tech
 figure: /images/ndahp_small.png
 tags: [tech, web, jekyll]
 ---
-{% include JB/setup %}
+
 
 我的公司 [Dwarf Artisan](http://dwarf-artisan.com) 的网站也是用Jekyll搭建的，但是它不是典型的博客网站，例如，首页需要展示一些固定的内容。我对 Jekyll 的深入也基本上都围绕内容展示进行。
 

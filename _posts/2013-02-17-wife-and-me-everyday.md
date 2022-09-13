@@ -6,7 +6,7 @@ category: live
 tags: [live, family, joke]
 tagline: 节操什么的……喂节操呢？
 ---
-{% include JB/setup %}
+
 
 ### 2013-02-26
 

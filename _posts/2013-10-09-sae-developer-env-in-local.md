@@ -5,7 +5,7 @@ description: "现在在本地，特别是*nix系统下搭建SAE开发环境，�
 category: tech
 tags: [tech, web, python]
 ---
-{% include JB/setup %}
+
 
 SAE 平台上，大概 PHP 才是 First Language，相对来说 Python 支持起步比较晚，不过至今也已经相当完善。
 

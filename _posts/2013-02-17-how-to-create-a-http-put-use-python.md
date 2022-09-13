@@ -5,7 +5,7 @@ description: "旧文搬家，用Python构造HTTP PUT请求的代码"
 category: tech
 tags: [python, web]
 ---
-{% include JB/setup %}
+
 
 用python发送put请求
 

@@ -5,7 +5,7 @@ description: "优逸科技招聘高级软件开发人才。"
 category: jobs
 tags: [招聘]
 ---
-{% include JB/setup %}
+
 
 优逸 [http://corp.yoo-e.com/](http://corp.yoo-e.com) ，大家有兴趣可以看看他们的网站，不多介绍了。简单的说是一个专注密码安全领域的企业。有硬件和软件的配套产品。他们现在要招一个软件开发方面的高级人才。
 

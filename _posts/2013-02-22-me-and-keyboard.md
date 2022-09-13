@@ -5,7 +5,7 @@ description: "我个人关于键盘的选择和使用习惯的体验。"
 category: other
 tags: [其它]
 ---
-{% include JB/setup %}
+
 
 昨天朋友问起键盘的事情，我向他推荐了我自己在用的产品。为避免广告之嫌，就不详细列出品牌了，一个国产的 Cherry 轴机械键盘。
 

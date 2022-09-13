@@ -5,7 +5,7 @@ description: "Emacs有非常强大的扩展能力，可以用它和iPython组合
 category: tech
 tags: [Emacs, Python, IPython]
 ---
-{% include JB/setup %}
+
 
 Emacs 是著名的万能编辑器，它同样可以用来建立一个非常强大的Python开发环境。
 

@@ -5,7 +5,7 @@ description: "最初紧急搭建的公司网站已经越来越难以满足要求
 category: tech
 tags: [tech, web, jekyll]
 ---
-{% include JB/setup %}
+
 
 ## 意外的开始
 
