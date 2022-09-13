@@ -2,15 +2,24 @@
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink: /:categories/:year/:month/:day/:title 
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-auto: true
+exclude: 
+  - ".rvmrc"
+  - ".rbenv-version"
+  - "README.md" 
+  - "Rakefile" 
+  - "changelog.md" 
+  - ".Ulysses-Group.plist"
+  - ".Ulysses-Settings.plit"
+
 # pygments: true
 highlighter: rouge
-theme: minimal-mistakes-jekyll
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-
+# remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: daattali/beautiful-jekyll@5.0.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
 
 title : 挖坑不填兽
 tagline: Site Tagline
