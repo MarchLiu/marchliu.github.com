@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Apache Commons Lang3 Bridge 未（完全）实现的内容"
-description: ""
+description: "实现这个封装库时，并非无条件的照搬，而是做了一定的取舍。"
 category: 
 tags: []
 ---
