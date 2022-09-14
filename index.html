@@ -8,12 +8,22 @@ subtitle: 持续挖坑……
 <hr>
   <h1>{{post.title}}</h1>  
   {{post.date|date: "%Y-%m-%d"}}
-
+|
   {{post.description}}
-
   {% if post.figure %}
-`<a href="{{post.url}}"><img src="{{post.figure}}"/>``</a>`
+  <div class="blog-post img">
+  `<a href="{{post.url}}"><img src="{{post.figure}}"/>``</a>`
+  </div>
   {% endif %}
-
   <a href="{{post.url}}">阅读全文</a>
+  {% if post.tags.size > 0 %}
+  <div class="blog-tags">
+    <span>Tags:</span>
+    {% for tag in post.tags %}
+      <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+<br>
+
 {% endfor %}
