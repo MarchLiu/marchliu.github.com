@@ -32,12 +32,12 @@ plugins:
 
 title : 挖坑不填兽
 tagline: Site Tagline
-author :
-  name : 刘鑫
-  email : march.liu@gmail.com
-  github : MarchLiu
-  twitter : marchliu
-  feedburner : feedname
+author : 刘鑫<mars.liu@outlook.com>
+
+#  name : 刘鑫
+#  email : march.liu@gmail.com
+#  github : MarchLiu
+#  twitter : marchliu
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
