@@ -28,7 +28,7 @@ cmake --build . --config Release
 
 但是我尝试执行单元测试时，提示错误信息：`fatal error: 'ggml-common.h' file not found` 。
 
-一开始我以为是头文件的搜索问题，做了一些尝试没有成功，去项目站提了 issue：[fatal error: 'ggml-common.h' file not found](https://github.com/kherud/java-llama.cpp/issues/61)。
+一开始我以为是头文件的搜索问题，做了一些尝试没有成功————我也尝试修改cmake脚本，将项目构建过程中得到的`llama-common.h` 直接复制到resource中，仍然会提示找不到这个头文件————于是我去项目站提了 issue：[fatal error: 'ggml-common.h' file not found](https://github.com/kherud/java-llama.cpp/issues/61)。
 
 经作者指导，需要将 llama.cpp 编译为嵌入模式：
 
@@ -55,3 +55,15 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(llama.cpp)
 ```
 
+根据作者的介绍，maven 仓库中的发布版本
+
+```pom
+<dependency>
+    <groupId>de.kherud</groupId>
+    <artifactId>llama</artifactId>
+    <version>3.0.2</version>
+</dependency>
+```
+
+就是一个完整的嵌入版本，不需要另外编译llama.cpp。但是从文档来看，这个版本应该是使用cpu资源，而自己编译的llama.cpp ，可以使用我们
+需要的任意硬件，例如macos 的 metal 。
