@@ -24,7 +24,7 @@ cmake --build . --config Release
 
 即可编译使用。
 
-我以前就构建过 llama.cpp，所以我的电脑上相关的依赖都是完整的，这部分出了必要的网络配置，也没有遇到什么问题。
+我以前就构建过 llama.cpp，所以我的电脑上相关的依赖都是完整的，这部分除了必要的网络配置，也没有遇到什么问题。
 
 但是我尝试执行单元测试时，提示错误信息：`fatal error: 'ggml-common.h' file not found` 。
 
