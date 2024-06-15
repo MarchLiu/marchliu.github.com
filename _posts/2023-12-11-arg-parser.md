@@ -2,7 +2,7 @@
 layout: post
 title: "Arg Parser"
 description: "A simple arguments parser base special rules and Jaskell style"
-category: 
+category: tech
 tags: ["java", "jaskell"]
 ---
 

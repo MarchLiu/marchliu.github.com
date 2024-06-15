@@ -2,7 +2,7 @@
 layout: post
 title: "一次不成功的 pull request"
 description: "或许，解决ollama嵌入向量的降维问题，已经没有简单的路可以走了"
-category: 
+category: tech
 tags: ["llm", "c", "ollama", "embedding"]
 ---
 

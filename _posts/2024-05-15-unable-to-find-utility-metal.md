@@ -2,7 +2,7 @@
 layout: post
 title: "unable to find utility "metal""
 description: ""
-category: 
+category: tech
 tags: [cpp, macos, matel]
 ---
 

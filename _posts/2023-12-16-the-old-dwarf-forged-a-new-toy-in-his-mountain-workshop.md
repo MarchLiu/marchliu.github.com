@@ -2,7 +2,7 @@
 layout: post
 title: "个人版 AI 辅助系统的尝试"
 description: "The Old Dwarf Forged A New Toy In His Mountain Workshop"
-category: 
+category: tech
 tags: ["AI", "Python", "Java", "Parsec"]
 ---
 

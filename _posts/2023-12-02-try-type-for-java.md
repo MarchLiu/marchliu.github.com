@@ -2,7 +2,7 @@
 layout: post
 title: "为 Java 编写的 Try 和 Tuple 类型"
 description: "Java 传统上使用 try catch finally 关键字管理异常。这种机制久经考验。我参考 scala 的 Try 类型，编写了一组适用 java 的工具。"
-category: 
+category: tech
 tags: ["java", "Jaskell", "try", "tuple"]
 ---
 

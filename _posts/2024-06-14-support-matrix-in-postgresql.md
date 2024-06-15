@@ -2,7 +2,7 @@
 layout: post
 title: "在 PG 中支持矩阵乘法"
 description: "Tensor Dancer 项目核心目标之一，是在 PostgreSQL 中提供张量计算能力。这里我们从一个最简单的需求开始：支持矩阵乘法，使我们可以对 pgvector 的向量使用 PCA 矩阵降维。"
-category: 
+category: tech
 tags: [c, cpp, postgresql, ai, ggml, blas, lapack, pgvector, matrix]
 ---
 
