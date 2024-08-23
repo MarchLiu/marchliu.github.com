@@ -44,12 +44,24 @@ JupyterLab 是 Jupyter Notebook 的基础上发展出来的集成开发环境，
 > This is a placeholder package created in July 2015 to ensure we have a place to upload our software, called “lychee.” Since someone else already took that package name, we’ll use this alternative spelling.
 问题是快十年过去了，这个项目还是空的。看作者头像还是位白人老兄，图啥啊真是，何必为难我这个精神广东人。
 我将项目名改成了 Jupyter-litchi 。
-比这个更麻烦的是，我发现按照官方推荐的方式打包上传到 pypi 再用 pip install 安装，会安装失败。
-目前我还没有定位到问题出在哪里，目前看起来默认的项目模板本来就少东西，我现在将前端部分发布到 npm ，python部分发布到pypi，然后调用
+目前我还没有定位到问题出在哪里，目前看起来默认的项目模板本来就少东西，经过尝试，我找到了目前可行的安装方法。
+## 安装 litchi
+首先，我们要确定这么几个依赖：
+### Python
+我试了一下，用 pyenv 也可以，用 conda 也可以，如果conda的话，可以按照官方文档安装jupyterlab 插件开发环境的方法准备环境：
+### Jupyter
+需要 Jupyter 和 jupyterlab，并且 jupyterlab 需要确保在 4.x。
+### node
+是的安装过程需要编译 litchi 的前端代码，所以我们要安装 20+ 的 node，还要安装yarn 。
+### ollama
+我们需要在本机安装一个 ollama ，并且要运行在默认的 11434 端口。未来 Litchi 会提供配置 ollama 和其它 AI 服务的功能。毕竟，在工作机本地运行一个实用的 LLM，还是比较奢侈的事情。
+### Litcchi
+调用
 ```bash
 jupyter labextension install jupyter-litchi
 ```
-可以安装成功。但是 `jupyter labextension install ` 本身是个 Deprecated 的命令，也许哪一天 jupyterlab 就会去掉这个功能。我还在尝试如何正确的把这个插件编译成可以通过 pip 安装的包。
+可以安装成功。这个过程中会分别从 pypi 和 npm 下载需要的东西。并且不需要重启在运行的 jupyter lab ，只要刷新页面，就可以看到 litchi 工具栏出现在 notebook 页上。我们但是 `jupyter labextension install ` 本身是个 Deprecated 的命令，也许哪一天 jupyterlab 就会去掉这个功能。我还在尝试如何正确的把这个插件编译成可以通过 pip 安装的包。
+然后，我们就可以从 litchi 工具栏选择 model ，当notebook中选定了某个cell后，就可以点击send按钮，或者按 cmd+shift+c 进入 jupyter 的命令行，选择 `Litchi Chat`，Litchi 就会将当前 cell 的内容发给 AI，然后新建一个 cell，写入 AI 的答复。
 ### 写在最后
 从四月底回到北方，我现在仍然没有找到工作。每天我会用掉招聘平台限定的投递次数，大多没有回应。
 关于找工作，值得将来单独写出来。很多事情如果不是发生在自己身上，其实也算是有趣的经历。比如经常被猎头回应年龄超出，我也觉得没有太失落，我知道正常情况下，我们在招聘市场上确实很难见到45岁以上的老头子还能用现在的开发技术写程序。
