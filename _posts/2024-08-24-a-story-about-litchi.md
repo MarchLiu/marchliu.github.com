@@ -38,7 +38,7 @@ JupyterLab 是 Jupyter Notebook 的基础上发展出来的集成开发环境，
 ```
 于是，这个问题就用这么一个看起来很离谱却越想越合理的方法解决了。
 这个项目，我没有想到特别贴切有好记的名字，这个世界上已经有太多的 AI 工具叫 copilot 或者 associate 了，我决定按照习惯，找一个食物的名字。
-Litchi 就是荔枝，看起来这个名字就是从中文音译而来。这很好，它很简单，荔枝又是我非常喜欢的水果。
+[Litchi](https://github.com/MarchLiu/litchi) 就是荔枝，看起来这个名字就是从中文音译而来。这很好，它很简单，荔枝又是我非常喜欢的水果。
 我在广东生活了十五六年，在那里成家立业，度过了整个青年时代。日啖荔枝三百颗，不辞长作岭南人。
 直到我发布这个软件包的时候才发现问题，pypi上的 litchi 项目名已经被占了，这个项目的作者说他仅仅是为了给自己在开发的另一个项目占个位子：
 > This is a placeholder package created in July 2015 to ensure we have a place to upload our software, called “lychee.” Since someone else already took that package name, we’ll use this alternative spelling.
