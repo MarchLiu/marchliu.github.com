@@ -9,3 +9,4 @@ tags: ["jekyll", "ruby"]
 - 清理了 index 模板的错误
 - 升级了bundles中的ruby
 - 升级了一些依赖库
+- 更新主题配置
