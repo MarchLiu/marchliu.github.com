@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C/C\+\+ 混合编程"
+title: "C/C++ 混合编程"
 description: "记录一下tensor dancer开发过程中遇到的混合开发问题"
 category: tech
 tags: [c, cpp, 'tensor dancer', llm, postgresql]

@@ -24,7 +24,8 @@ highlighter: rouge
 # so be sure to set them if your theme uses them.
 #
 # remote_theme: pages-themes/minimal@v0.2.0
-remote_theme: daattali/beautiful-jekyll@5.0.0
+# remote_theme: daattali/beautiful-jekyll@5.0.0
+theme: beautiful-jekyll-theme
 
 plugins:
   - jekyll-paginate

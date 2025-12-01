@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "unable to find utility "metal""
-description: ""
+title: "unable to find utility \"metal\""
+description: "解决 macOS 上编译 llama.cpp 时遇到的 metal 工具找不到的问题"
 category: tech
 tags: [cpp, macos, matel]
 ---
