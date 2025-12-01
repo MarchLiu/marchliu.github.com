@@ -1,0 +1,48 @@
+<!-- Mermaid.js for diagram rendering -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    mermaid.initialize({ 
+      startOnLoad: false,
+      theme: 'default',
+      securityLevel: 'loose',
+      flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true
+      }
+    });
+    
+    // Find all code blocks with class 'language-mermaid' and convert them
+    var mermaidCodeBlocks = document.querySelectorAll('code.language-mermaid');
+    var hasMermaid = false;
+    
+    mermaidCodeBlocks.forEach(function(codeElement) {
+      hasMermaid = true;
+      // Get the parent pre element if it exists
+      var pre = codeElement.parentElement;
+      if (pre && pre.tagName === 'PRE') {
+        // Create a new div for mermaid
+        var mermaidDiv = document.createElement('div');
+        mermaidDiv.className = 'mermaid';
+        mermaidDiv.textContent = codeElement.textContent || codeElement.innerText;
+        // Replace the pre element with the mermaid div
+        pre.parentNode.replaceChild(mermaidDiv, pre);
+      } else {
+        // If no pre parent, just convert the code element
+        var mermaidDiv = document.createElement('div');
+        mermaidDiv.className = 'mermaid';
+        mermaidDiv.textContent = codeElement.textContent || codeElement.innerText;
+        codeElement.parentNode.replaceChild(mermaidDiv, codeElement);
+      }
+    });
+    
+    // Also check for existing mermaid divs
+    var existingMermaid = document.querySelectorAll('.mermaid');
+    
+    // Render all mermaid diagrams
+    if (hasMermaid || existingMermaid.length > 0) {
+      mermaid.run();
+    }
+  });
+</script>
+

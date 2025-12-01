@@ -10,3 +10,4 @@ tags: ["jekyll", "ruby"]
 - 升级了bundles中的ruby
 - 升级了一些依赖库
 - 更新主题配置
+- 添加 mermaid 支持
