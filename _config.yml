@@ -24,8 +24,8 @@ highlighter: rouge
 # so be sure to set them if your theme uses them.
 #
 # remote_theme: pages-themes/minimal@v0.2.0
-# remote_theme: daattali/beautiful-jekyll@5.0.0  # GitHub Pages 使用
-theme: beautiful-jekyll-theme  # 本地开发使用，GitHub Pages 不支持
+remote_theme: daattali/beautiful-jekyll@5.0.0  # GitHub Pages 使用
+# theme: beautiful-jekyll-theme  # 本地开发使用，GitHub Pages 不支持
 
 plugins:
   # - jekyll-remote-theme  # 本地开发时不需要
