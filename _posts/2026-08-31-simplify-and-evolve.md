@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "简化与评估：通过简化数据库机制实现架构升级"
+title: "简化与演化"
 description: "hypatia 去除 duckdb 的完整推理——从 OLAP/OLTP 的错配、多 Agent 并发、指令集的稳定迁移，到外置向量索引与单一边界内的一致检索。"
 category: 
 tags: ["AI", "hypatia", "SQLite", "数据库", "架构"]
